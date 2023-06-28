@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JavaScript</title>
+</head>
+<body>
+    <div id ="header">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            
+
+        </ul>
+    </div>
+    <div class="footer">
+        
+        <p>Copyright Java</p>
+
+    </div>
+    <script>
+
+        let divheader = document.getElementById("header")
+        console.log(divheader)
+
+        let aList = divheader.getElementsByTagName("a")
+        console.log("SL:",aList.length)
+        //tính số lượng thẻ a
+        for (let i = 0; i< aList.length; i++){
+            //cho vào
+            //aList[i].setAttribute ("title","Java")
+            //lấy gtri ra
+            //console.log(aList[i].getAttribute("href"))
+            //đổi tên thẻ a
+            aList[i].innerHTML= "<b>Java</b>"
+        
+
+        }
+        let divList = document.getElementsByTagName("div")
+        console.log("sl:",divList.length)
+        //let pList = document.getElementsByTagName("p")
+        
+        //tìm thẻ div class là footer
+        
+        let footerDivList = document.querySelectorAll("div.footer")//tìm tất cả thẻ div có class là footer
+
+        let pFooterList = footerDivList[0].getElementsByTagName("p")
+        //console.log("SL:",pFooterlist.length)
+        pFooterList[0].innerHTML = "Trungtam"
+        
+    </script>
+</body>
+</html>

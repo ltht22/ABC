@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JavaScript</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+        .fontstyle {
+            font-style: íalic;
+            color: green;
+        }
+        a{
+            font-size: 20px;
+
+        }
+    
+    </style>
+</head>
+<body>
+    <a href="">Home</a>
+    <a href="">About</a>
+
+    <p>Copyright Java</p>
+    <script>
+        let aList = document.getElementsByTagName("a")
+        for (let i = 0; i < aList.length; i++){
+            aList[i].style.fontSize = "30px"
+        }
+    </script>
+
+</body>
+</html>
