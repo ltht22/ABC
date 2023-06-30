@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JavaScript</title>
+</head>
+<body>
+    <body>
+        <div id="header">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Home</a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>Copyright Java</p>
+        </div>
+        <script>
+            let ulElement = document.getElementById("header").firstElementChild
+            //them phần tử li
+            let li = document.createElement("li")
+            let a = document.createElement("a")
+            a.href = ""
+            a.innerHTML = "Java Blog"
+            //cho a vào li
+            li.appendChild(a)
+            
+            ulElement.appendChild(li) //appendChild thêm vào sau cùng
+            
+            //ulElement.prepend(li) // prepend thêm trên cùng
+            //thay thế lifirst cho li
+            let liFirst = ulElement.firstElementChild
+            console.log(liFirst)
+            ulElement.replaceChild(liFirst,li)
+            //xoa
+            ulElement.removeChild(liFirst)
+        </script>
+</body>
+</html>

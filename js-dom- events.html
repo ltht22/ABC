@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM JavaScript</title>
+</head>
+<body>
+    <a href="" 
+
+    onmouseover="change(this)"
+    onmouseout="changeColor(this)">Click here</a>
+    <input type="text" id="name" value="" onkeyup="upperCase(this)">
+        <button id ="submit" onclick="login(this)">login</button>
+
+    
+    
+    <script>
+        
+        function change(self){
+            self.style.color = "red"
+        }
+        function changeColor(self){
+            self.style.color = "blue"
+        }
+
+        function upperCase(self){
+            let value= self.value
+            self.value=value.toUpperCase()
+        }
+        //cách 1 
+        function login(self){
+            alert("succes login")
+        }
+        //cách 2 add sự kiện vào html dùng document.getElementById
+        let submit = document.getElementById("submit")
+        submit.onclick = function(){
+            alert("succes login")
+        }
+        //cách 3
+        submit.addEventListener("click",function(){
+            alert("succes login")
+        })
+    </script>
+    
+</body>
+</html>

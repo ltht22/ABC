@@ -9,12 +9,18 @@
             text-align: center;
         }
         .fontstyle {
-            font-style: íalic;
+            font-style: italic;
             color: green;
         }
+        
         a{
             font-size: 20px;
 
+        }
+        .style{
+            border: 2px  ;
+            border-radius: 5px
+            
         }
     
     </style>
@@ -28,7 +34,16 @@
         let aList = document.getElementsByTagName("a")
         for (let i = 0; i < aList.length; i++){
             aList[i].style.fontSize = "30px"
+            aList[i].style.color = "red"
+           
         }
+        //class cho thẻ HTML ( chuyền nhiêù class css vào )
+
+        //aList[i].classList = "center"}
+
+        let pList = document.getElementsByTagName("p")
+       // pList[0].classList = "center"
+        pList[0].setAttribute("class","center fontstyle style")
     </script>
 
 </body>

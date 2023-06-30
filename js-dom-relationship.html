@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM JavaScript</title>
+    </head>
+    <body>
+        <div id="header">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Home</a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <p>Copyright Java</p>
+        </div>
+        <script>
+            //xem có bao nhiêu phần trong body
+            //dùng hàm Children trả về đối tượng HTMLCollection
+            let body=document.body.children
+            console.log(body)
+            console.log(body[0])
+            console.log(body[body.length-1])
+            //lấy ra phần tử con đầu tiên của body
+            let first=document.body.firstElementChild
+            console.log(first)
+
+            //lấy ra phần tử con cuối cùng của body
+            let last=document.body.lastElementChild
+            console.log(last)
+
+
+            //tìm phần tử kế tiếp trong body
+            let nextelement= document.body.firstElementChild.nextElementSibling
+            console.log(nextelement)
+
+            nextelement.firstElementChild.innerHTML = "Hello"
+            //tìm phần tử cha
+            let parentheader = document.getElementById("header")
+            console.log(parentheader.parentElement)
+            
+            
+        </script>
+    
+        
+</html>
