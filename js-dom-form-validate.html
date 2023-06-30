@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widthdevice-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div>
+        <form id=""add-user-form>
+            <div>
+                <label for="">Username:</label>
+                <input type="text" id="username" value="">
+            </div>
+            <div>
+                <label for="">Password:</label>
+                <input type="passwword" id="password" value="">
+            </div>
+            <div>
+                <label for="">Address:</label>
+                <input type="type" id="address" value="">
+            </div>
+            <div>
+                <button type = "button" id="submit-btn">Add</button>
+            </div>
+        </form>
+     </div>
+     <script>
+        let submitbtn=document.getElementById("submit-btn")
+
+        submitbtn.onclick = function (){
+            
+            let usernameElement = document.getElementById("username")
+            let passwordElement = document.getElementById("password")
+            let addressElement = document.getElementById("address")
+
+            if (usernameElement.value.length <6 ){
+                usernameElement.style.backgroundColor = "red"
+                
+
+            }
+        }
+     </script>
+</body>
+</html>
